@@ -68,34 +68,39 @@ npm install
 
 Create or update the `.env` file in the root directory:
 
+### Environment Variables (.env)
+
+Create a `.env` file in the root directory with the following configuration:
+
 ```env
-# Database Configuration
-# No Postgres required - using SQLite (fincore_audit.db)
+# Google Gemini
+GOOGLE_API_KEY=your_gemini_api_key
+GEMINI_MODEL=gemini-2.0-flash
+
+# LangSmith (Observability & Tracing)
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
+LANGCHAIN_API_KEY=your_langchain_api_key
+LANGCHAIN_PROJECT=fincore-banking-assistant
+
+# Neo4j AuraDB
 NEO4J_URI=neo4j+s://<your-aura-db-id>.databases.neo4j.io
-NEO4J_USER=neo4j
+NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=<your-password>
+NEO4J_DATABASE=neo4j
 
-# API Configuration
-API_PORT=8000
-API_HOST=0.0.0.0
+# SQLite Audit DB
+AUDIT_DB_PATH=./fincore_audit.db
 
-# MCP Server Configuration
-CORE_BANKING_SERVER_HOST=localhost
-CORE_BANKING_SERVER_PORT=5001
-CREDIT_SERVER_HOST=localhost
-CREDIT_SERVER_PORT=5002
-FRAUD_SERVER_HOST=localhost
-FRAUD_SERVER_PORT=5003
-COMPLIANCE_SERVER_HOST=localhost
-COMPLIANCE_SERVER_PORT=5004
-
-# Logging
+# Backend App Configuration
+APP_ENV=development
+APP_PORT=8000
 LOG_LEVEL=INFO
-LOG_FILE=./logs/fincore.log
+LOG_FILE_PATH=logs/fincore.log
+ALLOWED_ORIGINS=http://localhost:3000
 
-# Environment
-ENVIRONMENT=development
-DEBUG=true
+# Frontend Configuration
+NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
 ## 🚀 Running the Application
@@ -341,14 +346,28 @@ The frontend includes demo scenarios:
 - **Fraud Detection** - Analyze transactions for fraud risk
 - **Compliance Check** - Verify KYC and AML status
 
-## 📝 Logging
+## 🔍 Observability & Logging
 
-Logs are saved to `logs/fincore_YYYYMMDD.log`
+### LangSmith Tracing
+FinCore uses **LangSmith** for deep observability into agentic workflows.
+- **Trace Visualization**: View the full execution graph for every user query.
+- **Latency Monitoring**: Track performance across different agents.
+- **Cost Tracking**: Monitor token usage for Gemini models.
+
+To enable, set `LANGCHAIN_TRACING_V2=true` and provide your `LANGCHAIN_API_KEY` in `.env`.
+
+### Application Logging
+Logs are captured using `structlog` for structured, machine-readable output.
+- **Console**: Human-readable logs in development mode.
+- **File**: All logs are saved to `logs/fincore.log` (rotating).
 
 Configure logging level in `.env`:
 ```env
 LOG_LEVEL=INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
 ```
+
+### Audit Trail
+All critical agent decisions and data operations are persisted in the **SQLite Audit DB** (`fincore_audit.db`). This ensures transparency and allows for retroactive analysis of AI behavior.
 
 ## 🔐 Security Considerations
 
