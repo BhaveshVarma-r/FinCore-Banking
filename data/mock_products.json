@@ -1,0 +1,122 @@
+[
+  {
+    "id": "PROD001",
+    "name": "Basic Savings Account",
+    "category": "account",
+    "min_balance": 1000,
+    "eligibility_criteria": "age >= 18, kyc_verified",
+    "interest_rate": 3.5
+  },
+  {
+    "id": "PROD002",
+    "name": "Premium Savings Account",
+    "category": "account",
+    "min_balance": 25000,
+    "eligibility_criteria": "credit_score >= 700, kyc_verified",
+    "interest_rate": 4.5
+  },
+  {
+    "id": "PROD003",
+    "name": "Current Account",
+    "category": "account",
+    "min_balance": 10000,
+    "eligibility_criteria": "business_entity, kyc_verified",
+    "interest_rate": 0
+  },
+  {
+    "id": "PROD004",
+    "name": "Home Loan",
+    "category": "loan",
+    "min_balance": 0,
+    "eligibility_criteria": "credit_score >= 650, kyc_verified",
+    "interest_rate": 8.5
+  },
+  {
+    "id": "PROD005",
+    "name": "Personal Loan",
+    "category": "loan",
+    "min_balance": 0,
+    "eligibility_criteria": "credit_score >= 680",
+    "interest_rate": 13.5
+  },
+  {
+    "id": "PROD006",
+    "name": "Car Loan",
+    "category": "loan",
+    "min_balance": 0,
+    "eligibility_criteria": "credit_score >= 650",
+    "interest_rate": 9.5
+  },
+  {
+    "id": "PROD007",
+    "name": "MSME Business Loan",
+    "category": "loan",
+    "min_balance": 0,
+    "eligibility_criteria": "gst_registered, credit_score >= 620",
+    "interest_rate": 11.5
+  },
+  {
+    "id": "PROD008",
+    "name": "Education Loan",
+    "category": "loan",
+    "min_balance": 0,
+    "eligibility_criteria": "age <= 35, admission_proof",
+    "interest_rate": 9.0
+  },
+  {
+    "id": "PROD009",
+    "name": "Fixed Deposit",
+    "category": "investment",
+    "min_balance": 5000,
+    "eligibility_criteria": "existing_customer",
+    "interest_rate": 7.2
+  },
+  {
+    "id": "PROD010",
+    "name": "Recurring Deposit",
+    "category": "investment",
+    "min_balance": 500,
+    "eligibility_criteria": "existing_customer",
+    "interest_rate": 6.8
+  },
+  {
+    "id": "PROD011",
+    "name": "Gold Loan",
+    "category": "loan",
+    "min_balance": 0,
+    "eligibility_criteria": "gold_collateral, kyc_verified",
+    "interest_rate": 10.5
+  },
+  {
+    "id": "PROD012",
+    "name": "Credit Card Classic",
+    "category": "card",
+    "min_balance": 0,
+    "eligibility_criteria": "credit_score >= 700",
+    "interest_rate": 36
+  },
+  {
+    "id": "PROD013",
+    "name": "Credit Card Premium",
+    "category": "card",
+    "min_balance": 0,
+    "eligibility_criteria": "credit_score >= 750",
+    "interest_rate": 36
+  },
+  {
+    "id": "PROD014",
+    "name": "Zero Balance Account",
+    "category": "account",
+    "min_balance": 0,
+    "eligibility_criteria": "age >= 18, kyc_verified",
+    "interest_rate": 3.0
+  },
+  {
+    "id": "PROD015",
+    "name": "NRI Savings Account",
+    "category": "account",
+    "min_balance": 10000,
+    "eligibility_criteria": "nri_status",
+    "interest_rate": 4.0
+  }
+]

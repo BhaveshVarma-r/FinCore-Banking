@@ -1,0 +1,66 @@
+[
+  {
+    "id": "REG001",
+    "source": "RBI",
+    "title": "Home Loan LTV Ratio",
+    "description": "LTV must not exceed 90% for loans up to 30L, 80% for 30-75L, 75% above 75L",
+    "effective_date": "2020-01-01",
+    "applies_to": "home_loan"
+  },
+  {
+    "id": "REG002",
+    "source": "RBI",
+    "title": "Personal Loan EMI Cap",
+    "description": "Total EMI must not exceed 50% of net monthly income (FOIR <= 0.5)",
+    "effective_date": "2019-06-01",
+    "applies_to": "personal_loan"
+  },
+  {
+    "id": "REG003",
+    "source": "RBI",
+    "title": "MSME Priority Sector Lending",
+    "description": "MSME loans qualify for priority sector. Max 10Cr micro, 50Cr small",
+    "effective_date": "2021-04-01",
+    "applies_to": "msme_loan"
+  },
+  {
+    "id": "REG004",
+    "source": "RBI",
+    "title": "KYC Mandatory",
+    "description": "KYC re-verification required every 2 years for high-risk customers",
+    "effective_date": "2023-01-01",
+    "applies_to": "all_accounts"
+  },
+  {
+    "id": "REG005",
+    "source": "RBI",
+    "title": "Fraud Reporting Window",
+    "description": "Fraud above 1L must be reported within 1 week. Above 5Cr within 24 hours",
+    "effective_date": "2020-07-01",
+    "applies_to": "fraud_transactions"
+  },
+  {
+    "id": "REG006",
+    "source": "DPDP",
+    "title": "Customer Data Privacy",
+    "description": "Under DPDP Act 2023, financial data cannot be shared without consent",
+    "effective_date": "2023-08-11",
+    "applies_to": "all_data"
+  },
+  {
+    "id": "REG007",
+    "source": "RBI",
+    "title": "Credit Card Interest Cap",
+    "description": "Max interest must be disclosed. No compounding on disputed amounts",
+    "effective_date": "2022-01-01",
+    "applies_to": "credit_card"
+  },
+  {
+    "id": "REG008",
+    "source": "RBI",
+    "title": "Dormant Account Guidelines",
+    "description": "Accounts inactive 2 years classified dormant. No charges. KYC for reactivation",
+    "effective_date": "2014-07-01",
+    "applies_to": "dormant_accounts"
+  }
+]
